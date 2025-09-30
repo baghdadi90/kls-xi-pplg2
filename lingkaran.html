@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <title>Menghitung Luas dan Keliling Lingkaran</title>
+    <script type="text/javascript">
+        function hitungluaskeliling() {
+            var jari = parseFloat(document.getElementById("jari").value);
+            var luas = Math.PI * jari * jari;
+            var keliling = 2 * Math.PI * jari;
+            document.getElementById("luas").value = luas.toFixed(2);
+            document.getElementById("keliling").value = keliling.toFixed(2);
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        <h4>Menghitung Luas dan Keliling Lingkaran</h4>
+        <table>
+            <tr>
+                <td>Jari-jari</td>
+                <td>:</td>
+                <td><input type="text" id="jari" name="jari"></td>
+            </tr>
+            <tr>
+                <td>Luas</td>
+                <td>:</td>
+                <td><input type="text" id="luas" name="luas" disabled="true" size="10"></td>
+            </tr>
+            <tr>
+                <td>Keliling</td>
+                <td>:</td>
+                <td><input type="text" id="keliling" name="keliling" disabled="true" size="10"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td><input type="button" value="hitung luas keliling" onClick="hitungluaskeliling()"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

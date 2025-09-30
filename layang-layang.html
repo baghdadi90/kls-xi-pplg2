@@ -1,0 +1,62 @@
+<html>
+
+<head>
+    <title>Menghitung Luas dan Keliling Layang-Layang</title>
+    <script type="text/javascript">
+        function hitungluaskeliling() {
+            var d1 = parseFloat(document.getElementById("diagonal1").value);
+            var d2 = parseFloat(document.getElementById("diagonal2").value);
+            var s1 = parseFloat(document.getElementById("sisi1").value);
+            var s2 = parseFloat(document.getElementById("sisi2").value);
+            var luas = (d1 * d2) / 2;
+            var keliling = 2 * (s1 + s2);
+            document.getElementById("luas").value = luas.toFixed(2);
+            document.getElementById("keliling").value = keliling.toFixed(2);
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        <h4>Menghitung Luas dan Keliling Layang-Layang</h4>
+        <table>
+            <tr>
+                <td>Diagonal 1</td>
+                <td>:</td>
+                <td><input type="text" id="diagonal1" name="diagonal1"></td>
+            </tr>
+            <tr>
+                <td>Diagonal 2</td>
+                <td>:</td>
+                <td><input type="text" id="diagonal2" name="diagonal2"></td>
+            </tr>
+            <tr>
+                <td>Sisi 1</td>
+                <td>:</td>
+                <td><input type="text" id="sisi1" name="sisi1"></td>
+            </tr>
+            <tr>
+                <td>Sisi 2</td>
+                <td>:</td>
+                <td><input type="text" id="sisi2" name="sisi2"></td>
+            </tr>
+            <tr>
+                <td>Luas</td>
+                <td>:</td>
+                <td><input type="text" id="luas" name="luas" disabled="true" size="10"></td>
+            </tr>
+            <tr>
+                <td>Keliling</td>
+                <td>:</td>
+                <td><input type="text" id="keliling" name="keliling" disabled="true" size="10"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td><input type="button" value="hitung luas keliling" onClick="hitungluaskeliling()"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

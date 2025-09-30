@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <title>Menghitung Luas Jajar Genjang</title>
+    <script type="text/javascript">
+        function hitungluas() {
+            var alas = parseFloat(document.getElementById("alas").value);
+            var tinggi = parseFloat(document.getElementById("tinggi").value);
+            var luas = alas * tinggi;
+            document.getElementById("luas").value = luas.toFixed(2);
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        <h4>Menghitung Luas Jajar Genjang</h4>
+        <table>
+            <tr>
+                <td>Alas</td>
+                <td>:</td>
+                <td><input type="text" id="alas" name="alas"></td>
+            </tr>
+            <tr>
+                <td>Tinggi</td>
+                <td>:</td>
+                <td><input type="text" id="tinggi" name="tinggi"></td>
+            </tr>
+            <tr>
+                <td>Luas</td>
+                <td>:</td>
+                <td><input type="text" id="luas" name="luas" disabled="true" size="10"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td><input type="button" value="hitung luas" onClick="hitungluas()"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
